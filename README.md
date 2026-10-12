@@ -30,3 +30,8 @@ flutter run
 ### UI Screenshot
 
 ![UI Screenshot](refresh_indicator/lib/final_ui_screenshot.png)
+
+
+### References
+
+https://pub.dev/documentation/material_ui/latest/material_ui/RefreshIndicator-class.html
