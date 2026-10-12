@@ -1,6 +1,6 @@
 # Flutter RefreshIndicator Demo
 
-A simple, interactive Flutter application built for our group presentation to demonstrate the mechanics of the `RefreshIndicator` widget. The app simulates an email inbox that fetches new messages with dynamic timestamps from a mock backend when the user pulls down from the top of the screen.
+The app simulates an email inbox that fetches new messages with dynamic timestamps from a mock backend when the user pulls down from the top of the screen using the `RefreshIndicator`
 
 ### Key Features
 
@@ -22,6 +22,7 @@ A simple, interactive Flutter application built for our group presentation to de
 3. Open your terminal and run the following commands:
 
 ```bash
+cd refresh_indicator
 flutter clean
 flutter pub get
 flutter run
