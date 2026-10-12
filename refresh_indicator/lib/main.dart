@@ -12,6 +12,7 @@ class RefreshDemo extends StatefulWidget {
 class _RefreshDemoState extends State<RefreshDemo> {
 
   List<Map<String, String>> inbox = [
+    // initial messages in the inbox
     {"message": "Pull down to refresh", "time": "10:05"},
     {"message": "Welcome to the presentation.", "time": "10:00"},
     {"message": "Hello everyone!", "time": "9:50"},
@@ -24,6 +25,7 @@ class _RefreshDemoState extends State<RefreshDemo> {
     final now = DateTime.now();
     final timeString = "${now.hour}:${now.minute.toString().padLeft(2, '0')}";
 
+    // Add a new message map to the top of our list and redraw the screen
     setState(() {
       inbox.insert(0, {
         "message": "New message just arrived",
@@ -43,7 +45,7 @@ class _RefreshDemoState extends State<RefreshDemo> {
         color: const Color.fromARGB(215, 73, 1, 86), 
         
         child: ListView.builder(
-          physics: const AlwaysScrollableScrollPhysics(),
+          physics: const AlwaysScrollableScrollPhysics(), // Allow short lists to be scrollable 
           itemCount: inbox.length,
           itemBuilder: (context, index) {
             
@@ -53,7 +55,9 @@ class _RefreshDemoState extends State<RefreshDemo> {
                 leading: const CircleAvatar(
                   child: Icon(Icons.mail),
                 ),
+                // Grab the message text for the main title
                 title: Text(inbox[index]["message"]!),
+                // Grab the time and put it on the far right side
                 trailing: Text(
                   inbox[index]["time"]!,
                   style: const TextStyle(color: Colors.grey, fontSize: 12),
