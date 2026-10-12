@@ -1,4 +1,4 @@
-# Flutter RefreshIndicator Demo
+# Flutter RefreshIndicator Presentation
 
 The app simulates an email inbox that fetches new messages with dynamic timestamps from a mock backend when the user pulls down from the top of the screen using the `RefreshIndicator`
 
@@ -15,7 +15,7 @@ The app simulates an email inbox that fetches new messages with dynamic timestam
 2.  **`color`:** Customizes the visual colors of the spinning arrow and its background circle.
 3.  **`child`:** Wraps a scrollable widget (`ListView`). If the child cannot scroll, the `RefreshIndicator` cannot detect the physical pull gesture.
 
-## How to Run
+### How to Run
 
 1. Ensure you have the Flutter SDK installed and an emulator running (or a device connected).
 2. Clone this repository to a **local directory**
@@ -26,3 +26,7 @@ cd refresh_indicator
 flutter clean
 flutter pub get
 flutter run
+```
+### UI Screenshot
+
+![UI Screenshot](refresh_indicator/lib/final_ui_screenshot.png)
